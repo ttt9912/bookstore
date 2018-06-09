@@ -14,14 +14,11 @@ public class RatingAdapter {
 
     public Rating getRatingById(long id){
         RatingServiceResponse response = ratingClient.getRatingById(id);
-
         log.info("received RatingResponse {}", response);
 
         Rating rating = new Rating();
         rating.setStars(response.getStars());
         rating.setComment(response.getComment());
-
-        log.info("received Rating {}", rating);
         return rating;
     }
 }

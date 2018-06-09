@@ -3,7 +3,7 @@ package ch.thts.rest.adapter;
 import ch.thts.business.data.Stars;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
+import lombok.Data;
 
 @Data
 public class RatingServiceResponse {
@@ -12,8 +12,8 @@ public class RatingServiceResponse {
 
     @JsonCreator
     public RatingServiceResponse(
-            @JsonProperty Stars stars,
-            @JsonProperty String comment) {
+            @JsonProperty("stars") Stars stars,
+            @JsonProperty("comment") String comment) {
         this.stars=stars;
         this.comment=comment;
     }
