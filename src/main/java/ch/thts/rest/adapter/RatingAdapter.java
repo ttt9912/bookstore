@@ -1,6 +1,6 @@
 package ch.thts.rest.adapter;
 
-import ch.thts.business.data.Rating;
+import ch.thts.data.Rating;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

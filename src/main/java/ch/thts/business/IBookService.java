@@ -1,6 +1,6 @@
-package ch.thts.business.service;
+package ch.thts.business;
 
-import ch.thts.business.data.Book;
+import ch.thts.data.Book;
 
 import java.util.List;
 

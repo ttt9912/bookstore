@@ -1,4 +1,4 @@
-package ch.thts.business.data;
+package ch.thts.data;
 
 import lombok.Data;
 

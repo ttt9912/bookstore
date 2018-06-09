@@ -1,9 +1,9 @@
-package ch.thts.business.service;
+package ch.thts.business;
 
-import ch.thts.business.data.Book;
-import ch.thts.business.data.Rating;
+import ch.thts.data.Book;
+import ch.thts.data.Rating;
 import ch.thts.entity.BookEntity;
-import ch.thts.repository.BookRepository;
+import ch.thts.entity.BookRepository;
 import ch.thts.rest.adapter.RatingAdapter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

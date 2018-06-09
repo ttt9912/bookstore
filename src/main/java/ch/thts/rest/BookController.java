@@ -1,7 +1,7 @@
-package ch.thts.rest.controller;
+package ch.thts.rest;
 
-import ch.thts.business.data.Book;
-import ch.thts.business.service.IBookService;
+import ch.thts.business.IBookService;
+import ch.thts.data.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

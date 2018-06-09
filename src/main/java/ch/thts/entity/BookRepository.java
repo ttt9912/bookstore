@@ -1,6 +1,5 @@
-package ch.thts.repository;
+package ch.thts.entity;
 
-import ch.thts.entity.BookEntity;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

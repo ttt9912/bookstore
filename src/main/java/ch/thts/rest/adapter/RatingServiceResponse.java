@@ -1,6 +1,6 @@
 package ch.thts.rest.adapter;
 
-import ch.thts.business.data.Stars;
+import ch.thts.data.Stars;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
