@@ -1,4 +1,4 @@
-package ch.thts.rest;
+package ch.thts.rest.controller;
 
 import ch.thts.business.data.Book;
 import ch.thts.business.service.IBookService;
@@ -14,11 +14,14 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-@AllArgsConstructor
 public class BookController {
 
-    @Autowired
     private final IBookService bookService;
+
+    @Autowired
+    public BookController(IBookService bookService) {
+        this.bookService = bookService;
+    }
 
     @GetMapping("/books")
     public ResponseEntity<List<Book>> getBooks() {

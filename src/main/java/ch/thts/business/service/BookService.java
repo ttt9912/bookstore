@@ -1,8 +1,10 @@
 package ch.thts.business.service;
 
 import ch.thts.business.data.Book;
+import ch.thts.business.data.Rating;
 import ch.thts.entity.BookEntity;
 import ch.thts.repository.BookRepository;
+import ch.thts.rest.adapter.RatingAdapter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -12,8 +14,14 @@ import java.util.stream.Collectors;
 @Component
 public class BookService implements IBookService {
 
+    private final BookRepository bookRepository;
+    private final RatingAdapter ratingAdapter;
+
     @Autowired
-    private BookRepository bookRepository;
+    public BookService(BookRepository bookRepository, RatingAdapter ratingAdapter) {
+        this.bookRepository = bookRepository;
+        this.ratingAdapter = ratingAdapter;
+    }
 
     @Override
     public List<Book> getAllBooks() {
@@ -30,6 +38,11 @@ public class BookService implements IBookService {
     private Book createBook(BookEntity entity) {
         Book book = new Book();
         book.setTitle(entity.getTitle());
+        book.setRating(createRating(entity.getId()));
         return book;
+    }
+
+    private Rating createRating(long id){
+        return ratingAdapter.getRatingById(id);
     }
 }

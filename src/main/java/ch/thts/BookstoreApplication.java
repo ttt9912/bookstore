@@ -2,6 +2,8 @@ package ch.thts;
 
 import ch.thts.entity.BookEntity;
 import ch.thts.repository.BookRepository;
+import ch.thts.rest.adapter.RatingAdapter;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -23,5 +25,10 @@ public class BookstoreApplication {
             bookRepository.save(new BookEntity("Homo Faber"));
             bookRepository.save(new BookEntity("Biedermann und die Brandstifter"));
         };
+    }
+
+    @Bean
+    public RatingAdapter ratingAdapter(@Value("${endpoint.book-rating-service}") String url) {
+        return new RatingAdapter(url);
     }
 }
