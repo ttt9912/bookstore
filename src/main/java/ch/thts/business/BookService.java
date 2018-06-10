@@ -4,7 +4,7 @@ import ch.thts.data.Book;
 import ch.thts.data.Rating;
 import ch.thts.entity.BookEntity;
 import ch.thts.entity.BookRepository;
-import ch.thts.rest.adapter.RatingAdapter;
+import ch.thts.integration.RatingAdapter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

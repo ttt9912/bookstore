@@ -2,7 +2,7 @@ package ch.thts;
 
 import ch.thts.entity.BookEntity;
 import ch.thts.entity.BookRepository;
-import ch.thts.rest.adapter.RatingAdapter;
+import ch.thts.integration.RatingAdapter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

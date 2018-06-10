@@ -1,11 +1,11 @@
-package ch.thts.rest.adapter;
+package ch.thts.integration;
 
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import feign.Feign;
 import feign.Logger;
-import feign.hystrix.HystrixFeign;
 import feign.jackson.JacksonDecoder;
 import feign.slf4j.Slf4jLogger;
 
@@ -15,12 +15,12 @@ class ClientFactory {
         return createDefaultClient().target(clazz, url);
     }
 
-    private static HystrixFeign.Builder  createDefaultClient() {
+    private static Feign.Builder createDefaultClient() {
         ObjectMapper mapper = new ObjectMapper()
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
                 .configure(MapperFeature.ACCEPT_CASE_INSENSITIVE_PROPERTIES, true);
 
-        return HystrixFeign.builder()
+        return Feign.builder()
                 .decoder(new JacksonDecoder(mapper))
                 .logger(new Slf4jLogger(ClientFactory.class))
                 .logLevel(Logger.Level.FULL);

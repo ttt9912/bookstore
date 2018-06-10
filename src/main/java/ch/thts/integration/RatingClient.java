@@ -1,4 +1,4 @@
-package ch.thts.rest.adapter;
+package ch.thts.integration;
 
 import feign.Param;
 import feign.RequestLine;

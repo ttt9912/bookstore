@@ -1,4 +1,4 @@
-package ch.thts.rest.adapter;
+package ch.thts.integration;
 
 import ch.thts.data.Rating;
 import lombok.extern.slf4j.Slf4j;

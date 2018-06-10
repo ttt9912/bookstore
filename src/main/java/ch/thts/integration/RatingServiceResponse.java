@@ -1,4 +1,4 @@
-package ch.thts.rest.adapter;
+package ch.thts.integration;
 
 import ch.thts.data.Stars;
 import com.fasterxml.jackson.annotation.JsonCreator;
